@@ -20,7 +20,11 @@ const TeamSchema = new mongoose.Schema(
     },
     foundationDate: {
       type: Number,
-      required: [true, "Please enter the foundation date"],
+      required: [true, "Please enter the foundation date of the team"],
+    },
+    img: {
+      type: String,
+      required: [true, "Please enter the badge of the team"],
     },
   },
   { timestamps: true }
