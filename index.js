@@ -10,6 +10,6 @@ dbConnection();
 app.use(express.json());
 app.use(cors());
 
-// app.use("/teams", require("./routes/teams"));
+app.use("/teams", require("./routes/teams"));
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
