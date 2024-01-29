@@ -23,6 +23,21 @@ const TeamController = {
         .send({ message: "Unexpected error looking for the teams" });
     }
   },
+  async getByName(req, res) {
+    try {
+      const { name } = req.params;
+      const team = await Team.findOne({ name });
+      if (!team) {
+        return res.status(404).send({ message: "Team not found" });
+      }
+      res.send(team);
+    } catch (error) {
+      console.error(error);
+      res
+        .status(500)
+        .send({ message: "Unexpected error looking for the team" });
+    }
+  },
 };
 
 module.exports = TeamController;

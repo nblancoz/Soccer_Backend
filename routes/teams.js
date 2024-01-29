@@ -5,5 +5,6 @@ const TeamController = require("../controllers/TeamController");
 
 router.post("/createTeams", TeamController.create);
 router.get("/getAll", TeamController.getAll);
+router.get("/getByName/:name", TeamController.getByName);
 
 module.exports = router;
