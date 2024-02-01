@@ -1,4 +1,3 @@
-const { response } = require("express");
 const Team = require("../models/Team");
 require("dotenv").config();
 
